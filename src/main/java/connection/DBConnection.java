@@ -1,3 +1,4 @@
+/** Paquete para hacer la conexión con la base de datos **/
 
 package connection;
 
@@ -6,9 +7,10 @@ import java.sql.DriverManager;
 
 
 
+
 public class DBConnection {
     Connection  connection;
-    static String bd = "movies_rental";
+    static String db = "movies_rental";
     static String  port = "3307";
     static String  login = "root";
     static String  password = "admin";
@@ -17,9 +19,9 @@ public class DBConnection {
     public DBConnection() {
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            String url = "jdbc:mysql://localhost:" + this.port + "/" + this.bd;
+            String url = "jdbc:mysql://localhost:" + this.port + "/" + this.db;
             connection = DriverManager.getConnection(url, this.login, this.password);
-            System.out.println("conexion exitosa");
+            System.out.println("Conexion Exitosa");
             
         } catch (Exception ex) {
             System.out.println("Error en la conecion " + ex);

@@ -1,5 +1,6 @@
 beans\Alquiler.class
-beans\Peliculas.class
+beans\Pelicula.class
 beans\Usuario.class
-.netbeans_automatic_build
+test\OperacionesBD.class
 servlets\pruebaServlet.class
+connection\DBConnection.class

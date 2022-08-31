@@ -2,7 +2,7 @@
 package beans;
 
 public class Usuario {
-    private int usermane;
+    private String usermane;
     private String contrasena;
     private String nombre;
     private String apellido;
@@ -12,7 +12,7 @@ public class Usuario {
 
     
     
-    public Usuario(int usermane, String contrasena, String nombre, String apellido, String email, double saldo, boolean premium) {
+    public Usuario(String usermane, String contrasena, String nombre, String apellido, String email, double saldo, boolean premium) {
         this.usermane = usermane;
         this.contrasena = contrasena;
         this.nombre = nombre;
@@ -24,12 +24,11 @@ public class Usuario {
 
     
     
-    
-    public int getUsermane() {
+    public String getUsermane() {
         return usermane;
     }
 
-    public void setUsermane(int usermane) {
+    public void setUsermane(String usermane) {
         this.usermane = usermane;
     }
 
@@ -88,6 +87,7 @@ public class Usuario {
     public String toString() {
         return "Usuario{" + "usermane=" + usermane + ", contrasena=" + contrasena + ", nombre=" + nombre + ", apellido=" + apellido + ", email=" + email + ", saldo=" + saldo + ", premium=" + premium + '}';
     }
-    
 
+   
+    
 }

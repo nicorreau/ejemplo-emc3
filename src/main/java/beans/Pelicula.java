@@ -1,7 +1,7 @@
 
 package beans;
 
-public class Peliculas {
+public class Pelicula {
     private int id;
     private String titulo;
     private String genero;
@@ -9,10 +9,10 @@ public class Peliculas {
     private int copias;
     private boolean novedad;
 
-    
+     
     
 /** Metodo constructor para poder ainicializar los atributos **/
-    public Peliculas(int id, String titulo, String genero, String autor, int copias, boolean novedad) {
+    public Pelicula(int id, String titulo, String genero, String autor, int copias, boolean novedad) {
         this.id = id;
         this.titulo = titulo;
         this.genero = genero;

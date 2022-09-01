@@ -30,13 +30,13 @@ public class OperacionesBD {
     
     
         public static void listarPelicula(){       /** Metodo para listar todas las peliculas **/
-        DBConnection con = new DBConnection();
+        DBConnection con = new DBConnection();    /** DBConnection para conectarnos a la base de datos **/
         String sql = "SELECT * FROM pelicula";
         try {
             Statement st = con.getConnection().createStatement();
-            ResultSet rs = st.executeQuery(sql);    
+            ResultSet rs = st.executeQuery(sql);    /** Ejecuta la sentencia SQL select **/
             while (rs.next()){                                 /** next es un metodo que va a recorrer pelicula por pelicula **/
-                int id = rs.getInt("id");
+                int id = rs.getInt("id");                      /** Trae el valor que encuentre el id **/
                 String titulo = rs.getString("titulo");     
                 String genero = rs.getString("genero");                 
                 String autor = rs.getString("autor"); 

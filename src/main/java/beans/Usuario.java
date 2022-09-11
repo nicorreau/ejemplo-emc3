@@ -2,21 +2,21 @@
 package beans;
 
 public class Usuario {
-    private String usermane;
+    private String username;
     private String contrasena;
     private String nombre;
-    private String apellido;
+    private String apellidos;
     private String email;
     private double saldo;
     private boolean premium;
 
     
     
-    public Usuario(String usermane, String contrasena, String nombre, String apellido, String email, double saldo, boolean premium) {
-        this.usermane = usermane;
+    public Usuario(String username, String contrasena, String nombre, String apellidos, String email, double saldo, boolean premium) {
+        this.username = username;
         this.contrasena = contrasena;
         this.nombre = nombre;
-        this.apellido = apellido;
+        this.apellidos = apellidos;
         this.email = email;
         this.saldo = saldo;
         this.premium = premium;
@@ -24,12 +24,12 @@ public class Usuario {
 
     
     
-    public String getUsermane() {
-        return usermane;
+    public String getUsername() {
+        return username;
     }
 
-    public void setUsermane(String usermane) {
-        this.usermane = usermane;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getContrasena() {
@@ -48,12 +48,12 @@ public class Usuario {
         this.nombre = nombre;
     }
 
-    public String getApellido() {
-        return apellido;
+    public String getApellidos() {
+        return apellidos;
     }
 
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
+    public void setApellidos(String apellidos) {
+        this.apellidos = apellidos;
     }
 
     public String getEmail() {
@@ -85,7 +85,7 @@ public class Usuario {
     
     @Override
     public String toString() {
-        return "Usuario{" + "usermane=" + usermane + ", contrasena=" + contrasena + ", nombre=" + nombre + ", apellido=" + apellido + ", email=" + email + ", saldo=" + saldo + ", premium=" + premium + '}';
+        return "Usuario{" + "username=" + username + ", contrasena=" + contrasena + ", nombre=" + nombre + ", apellidos=" + apellidos + ", email=" + email + ", saldo=" + saldo + ", premium=" + premium + '}';
     }
 
    

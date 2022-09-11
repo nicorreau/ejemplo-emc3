@@ -1,7 +1,10 @@
 servlets\ServletTest.class
 beans\Pelicula.class
 beans\Usuario.class
+controller\UsuarioController.class
 servlets\pruebaServlet.class
 beans\Alquiler.class
+controller\IUsuarioController.class
 test\OperacionesBD.class
+servlets\ServletUsuarioLogin.class
 connection\DBConnection.class

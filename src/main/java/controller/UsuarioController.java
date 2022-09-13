@@ -8,8 +8,8 @@ import connection.DBConnection;
 import com.google.gson.Gson;
 
 public class UsuarioController implements IUsuarioController{
-    @Override
     
+    @Override
     public String login(String username, String contrasena){
         Gson gson = new Gson();                  //El gson sirve para sincronisar el back con el front
         DBConnection con = new DBConnection();
@@ -19,13 +19,14 @@ public class UsuarioController implements IUsuarioController{
         try {
             Statement st = con.getConnection().createStatement();
             ResultSet rs = st.executeQuery(sql);
+            
             while (rs.next()) {
                 String nombre = rs.getString("nombre");
-                String apellidos = rs.getString("apellidos");
+                String apellido = rs.getString("apellido");
                 String email = rs.getString("email");
                 double saldo = rs.getDouble("saldo");
                 boolean premium = rs.getBoolean("premium");
-                Usuario usuario = new Usuario(username, contrasena, nombre, apellidos, email, saldo, premium);
+                Usuario usuario = new Usuario(username, contrasena, nombre, apellido, email, saldo, premium);
                 return gson.toJson(usuario);
 
             }

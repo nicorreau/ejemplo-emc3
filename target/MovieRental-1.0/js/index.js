@@ -1,15 +1,22 @@
-$(document).ready(function() {
-    $("#form-login").submit(function (event){
+$(document).ready(function () {
+
+    $("#form-login").submit(function (event) {  //Esta llamando la info que contenda el id form-login
+
         event.preventDefault();
         autenticarUsuario();
     });
+
+   
+
 });
 
-function autenticarUsuario(){
+function autenticarUsuario() {
+
     let username = $("#usuario").val();
     let contrasena = $("#contrasena").val();
-     $.ajax({
-        type:"GET",
+
+    $.ajax({
+        type: "GET",
         dataType: "html",
         url: "./ServletUsuarioLogin",
         data: $.param({
@@ -18,11 +25,11 @@ function autenticarUsuario(){
         }),
         success: function (result) {
             let parsedResult = JSON.parse(result);
-            if(parsedResult != false){
+            if (parsedResult != false) {
                 $("#login-error").addClass("d-none");
                 let username = parsedResult['username'];
-                document.location.href = "home.html?username= " + username;          
-            } else{
+                document.location.href = "home.html?username=" + username;
+            } else {
                 $("#login-error").removeClass("d-none");
             }
         }

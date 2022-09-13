@@ -5,18 +5,18 @@ public class Usuario {
     private String username;
     private String contrasena;
     private String nombre;
-    private String apellidos;
+    private String apellido;
     private String email;
     private double saldo;
     private boolean premium;
 
     
     
-    public Usuario(String username, String contrasena, String nombre, String apellidos, String email, double saldo, boolean premium) {
+    public Usuario(String username, String contrasena, String nombre, String apellido, String email, double saldo, boolean premium) {
         this.username = username;
         this.contrasena = contrasena;
         this.nombre = nombre;
-        this.apellidos = apellidos;
+        this.apellido = apellido;
         this.email = email;
         this.saldo = saldo;
         this.premium = premium;
@@ -48,12 +48,12 @@ public class Usuario {
         this.nombre = nombre;
     }
 
-    public String getApellidos() {
-        return apellidos;
+    public String getapellido() {
+        return apellido;
     }
 
-    public void setApellidos(String apellidos) {
-        this.apellidos = apellidos;
+    public void setapellido(String apellido) {
+        this.apellido = apellido;
     }
 
     public String getEmail() {
@@ -85,7 +85,7 @@ public class Usuario {
     
     @Override
     public String toString() {
-        return "Usuario{" + "username=" + username + ", contrasena=" + contrasena + ", nombre=" + nombre + ", apellidos=" + apellidos + ", email=" + email + ", saldo=" + saldo + ", premium=" + premium + '}';
+        return "Usuario{" + "username=" + username + ", contrasena=" + contrasena + ", nombre=" + nombre + ", apellido=" + apellido + ", email=" + email + ", saldo=" + saldo + ", premium=" + premium + '}';
     }
 
    

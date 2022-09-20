@@ -1,7 +1,7 @@
 /** Acciones que se van a realizar dentro del aplicativo web **/
 package test;
 
-import beans.Pelicula;
+import beans.Peliculas;
 import connection.DBConnection;
 import java.sql.ResultSet;
 import java.sql.Statement;
@@ -43,7 +43,7 @@ public class OperacionesBD {
                 int copias = rs.getInt("copias");
                 boolean novedad = rs.getBoolean("novedad");
                 
-                Pelicula pelicula = new Pelicula(id, titulo, genero, autor, copias, novedad);
+                Peliculas pelicula = new Peliculas(id, titulo, genero, autor, copias, novedad);
                 System.out.println(pelicula.toString());
             }
             st.executeQuery(sql);
